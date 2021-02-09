@@ -21,6 +21,7 @@ body {
   height: 100%;
   flex-direction: column;
   row-gap: 80px;
+  position: relative;
 }
 
 .circle {
@@ -34,7 +35,10 @@ body {
   align-items: center;
   cursor: pointer;
   transition: background 1s, transform 0.3s 1s cubic-bezier(0, 1.36, 1, 1);
-}
+  animation: move 2s infinite;
+  position: absolute;
+  left: 0;
+s}
 
 .circle:hover {
   background: red;
@@ -42,4 +46,20 @@ body {
   color: white;
   transform: rotate(-360deg) scale(2);
   font-size: 20px;
+}
+
+.cloud {
+  position: absolute;
+  left: 0;
+  animation-name: move;
+}
+
+@keyframes move {
+  from {
+    transform: translateX(0) scale(0.5);
+  }
+
+  to {
+    transform: translateX(1200px) scale(1.5);
+  }
 }
