@@ -64,7 +64,7 @@ body {
   background: linear-gradient(45deg, #e20b0b, #3d7b5d);
   top: 30px;
   left: 0;
-  animation: move 1s infinite alternate, fall 1s 2s infinite;
+  animation: drop 1s forwards;
 }
 
 @keyframes move {
@@ -86,5 +86,17 @@ body {
   }
   100% {
     top: 40px;
+  }
+}
+
+@keyframes drop {
+  0% {
+    transform: translateY(-200px);
+  }
+  70% {
+    transform: translateY(800px);
+  }
+  100% {
+    transform: translateY(600px);
   }
 }
