@@ -33,13 +33,13 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: 1s;
+  transition: background 1s, transform 0.3s;
 }
 
 .circle:hover {
   background: red;
   border: 20px solid rgb(238, 255, 0);
   color: white;
-  transform: rotate(360deg) scale(2);
+  transform: rotate(-360deg) scale(2);
   font-size: 20px;
 }
