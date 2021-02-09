@@ -36,7 +36,7 @@ body {
   align-items: center;
   cursor: pointer;
   transition: background 1s, transform 0.3s 1s cubic-bezier(0, 1.36, 1, 1);
-  animation: move 2s infinite;
+  /* animation: move 2s infinite; */
   position: absolute;
   left: 0;
   overflow-x: hidden;
@@ -64,15 +64,27 @@ body {
   background: linear-gradient(45deg, #e20b0b, #3d7b5d);
   top: 30px;
   left: 0;
-  animation: move 1s infinite alternate;
+  animation: move 1s infinite alternate, fall 1s 2s infinite;
 }
 
 @keyframes move {
-  from {
-    transform: translateX(0px) rotatez(0deg);
+  0% {
+    transform: translateX(0px) rotatez(0deg) scale(1);
   }
 
-  to {
-    transform: translateX(900px) rotatez(360deg);
+  0% {
+    transform: translateX(1200px) rotatez(360deg) scale(1.5);
+  }
+}
+
+@keyframes fall {
+  0% {
+    top: 30px;
+  }
+  50% {
+    top: 250px;
+  }
+  100% {
+    top: 40px;
   }
 }
