@@ -1,0 +1,43 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: #42d8fd;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+  row-gap: 80px;
+}
+
+.circle {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: rgb(238, 255, 0);
+  border: 20px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.circle:hover {
+  background: red;
+  border: 20px solid rgb(238, 255, 0);
+  color: white;
+}
