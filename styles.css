@@ -55,12 +55,24 @@ body {
   left: 0;
 }
 
+.rect {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  transform: rotate(45deg);
+  background: silver;
+  background: linear-gradient(45deg, #e20b0b, #3d7b5d);
+  top: 30px;
+  left: 0;
+  animation: move 1s infinite alternate;
+}
+
 @keyframes move {
   from {
-    transform: translateX(-100px);
+    transform: translateX(0px) rotatez(0deg);
   }
 
   to {
-    transform: translateX(1800px);
+    transform: translateX(900px) rotatez(360deg);
   }
 }
